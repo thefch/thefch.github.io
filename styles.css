@@ -1,14 +1,29 @@
+.card-container {
+    display: grid;
+    grid-column-gap: 50px;
+  }
+
 .card{
-    border: solid black;
+    border: solid white;
+    border-radius: 25px;
     padding: 15px;
     height: 120px;
     width: 400px;
+    box-shadow: 1px 1px gray;
+    overflow: auto;
+    resize: both;
+
 }
 
-#link {
+.link {
     color: blue;
     font-family: Arial, Helvetica, sans-serif bold;
     font-size: 20px;
+}
+
+.link:hover {
+    color: rgb(255, 115, 0);
+    font-size: x-large;
 }
 
 #repo-icon{
@@ -19,4 +34,13 @@
 #descriptor{
     color: gray;
     font-size: 70%;
+}
+
+.contactBox{
+    border: solid black;
+    border-radius: 25px;
+    padding: 15px;
+    height: 400px;
+    width: 700px;
+    box-shadow: 1px 1px gray;
 }

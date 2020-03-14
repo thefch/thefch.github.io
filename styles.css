@@ -1,106 +1,70 @@
-/*
+
 * {
-    box-sizing: border-box;
-  }
-.card-container {
-    display: grid;
-    grid-column-gap: 50px;
-  }
-
-.card{
-    border: solid white;
-    border-radius: 25px;
-    padding: 15px;
-    height: 120px;
-    width: 400px;
-    box-shadow: 1px 1px gray;
-
-    resize: both;
-
+  box-sizing: border-box;
+  resize: both;
+  
 }
 
-.link {
-    color: blue;
-    font-family: Arial, Helvetica, sans-serif bold;
-    font-size: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.link:hover {
-    color: rgb(255, 115, 0);
-    font-size: x-large;
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+  
+.row {
+  /* Remove extra left and right margins, due to padding 
+  resezes the cards when resizing window */
+  margin: 0 auto;
+
+  
+}
+  
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+  
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 150px;
+  width: 500px auto; /* fixed 500px width and auto when resizing window*/
+
+  margin: 0 auto;
+
 }
 
 #repo-icon{
-    width: 20px;
-    height: 20px;
-}
-
-
-
-.contactBox{
-    border: solid black;
-    border-radius: 25px;
-    padding: 15px;
-    height: 400px;
-    width: 700px;
-    box-shadow: 1px 1px gray;
-}
-
-
-*/
-* {
-    box-sizing: border-box;
-    resize: both;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-
-    height: 150px;
-    width: 500px auto;
-
-  }
-
-  #repo-icon{
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 #descriptor{
     color: gray;
     font-size: 70%;
+}
+
+.card-container{
+  text-align:center;
+  
 }

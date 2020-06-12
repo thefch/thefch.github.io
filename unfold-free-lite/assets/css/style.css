@@ -1774,7 +1774,32 @@ p.form-message.success, p.form-message.error {
 
 }
 .skill-holder{
-  padding-right: 6px;
-  padding-bottom: 6px;
+  padding: 6px;
   float: left;
+}
+
+/****/
+
+.recent-work-box{
+  border: 2px solid #754EF9;
+  display: flex;
+  border-radius: 12px;
+  color: black;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 150pt;
+  height: 150pt;
+  margin: 10px;
+  align-items: center;
+  
+}
+.recent-work-box:hover{
+  border: 2px solid rgb(255, 102, 0);
+  background-color: rgb(236, 246, 250);
+}
+
+.recent-work-title{
+  position: relative;
+  text-align: center;
 }

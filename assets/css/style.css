@@ -1803,3 +1803,80 @@ p.form-message.success, p.form-message.error {
   position: relative;
   text-align: center;
 }
+
+.big-image-banner{
+  /*position: fixed;*/
+ /* float: right;*/
+  width: auto;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.big-image-banner .img-top{
+  display: none;
+  position: relative;
+  border: 2px solid #754EF9;
+  border-radius: 50%;
+}
+.big-image-banner .img-back{
+  position: relative;
+  border: 2px solid #754EF9;
+  border-radius: 50%;
+}
+
+
+.big-image-banner:hover .img-top{
+  display: inline-block;
+  border: 2px solid #3c00fff8;
+  border-radius: 50%;
+}
+
+.big-image-banner:hover .img-back{
+  display: none;
+  border: 2px solid #754EF9;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 1200px) {
+  .img-back {
+    display: none;
+  }
+
+  .img-top{
+    display: none;
+  }
+
+}
+
+.recent-work-table{
+  text-align: center;
+}
+
+.face-img-box{
+  margin-top: 5px;
+  float: left;
+  text-align: center;
+
+}
+
+.face-img-box img{
+  
+  border: 5px solid #7650F9;
+  border-radius: 5%;
+  width: auto;
+  height: 500px;
+}
+
+.face-img-box:hover img{
+  border: 5px solid #bb50f9;
+  border-radius: 5%;
+}
+.email-container{
+  margin-top: 110px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+

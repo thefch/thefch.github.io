@@ -1881,6 +1881,28 @@ p.form-message.success, p.form-message.error {
 
 
 
-home-icon{
+.home-icon{
+  
+}
+
+.home-icon img{
+  background: none;
+}
+
+.home-icon:hover img{
+  
+  animation:iconAnimation 5s linear infinite;
+  
+}
+
+@keyframes iconAnimation {
+  
+  0%   {rotate: 0deg;}
+
+  25%  {rotate: 10deg;}
+  
+  50%  {rotate: -10deg;}
+  
+  75% {rotate: 0deg;}
   
 }

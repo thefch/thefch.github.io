@@ -1,3 +1,7 @@
+body {
+    background-color: transparent;
+}
+
 .flex-container {
     display: flex;
     /* background-color: DodgerBlue; */

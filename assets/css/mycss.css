@@ -1,5 +1,27 @@
 body {
-    background-color: transparent;
+    margin: 0;
+}
+
+
+/* acts like a body to change background color for dark and light themes seperatly */
+
+.body-child {
+    width: 100%;
+    height: 100%;
+}
+
+.widget {
+    position: sticky;
+    right: 0;
+    top: 0
+}
+
+.dark {
+    background-color: #2F3437;
+}
+
+.light {
+    background-color: white;
 }
 
 .flex-container {

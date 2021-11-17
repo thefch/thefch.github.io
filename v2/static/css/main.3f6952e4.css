@@ -5817,7 +5817,6 @@ h2 {
 .h2:before,
 h2:after,
 h2:before {
-    content: "";
     position: absolute;
     height: 100%;
     background-color: #F75C1E;

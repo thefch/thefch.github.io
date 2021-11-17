@@ -38,3 +38,15 @@ color:#F75C1E;
 .colored-heading{
     color:#F75C1E !important;
 }
+
+
+.title-heading{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.title-heading-btn{
+    background: transparent;
+    border:2px solid #F75C1E;
+    border-radius:5px;
+}

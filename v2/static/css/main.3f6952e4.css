@@ -369,7 +369,7 @@ img {
 .img-responsive {
     display: block;
     max-width: 100%;
-    height: auto
+    height: auto;
 }
 
 .img-rounded {
@@ -5679,6 +5679,12 @@ body.minimal {
 
 .hero-full-container {
     height: 100vh
+}
+
+
+.full-container {
+    height: 100%;
+    width: 100%;
 }
 
 .hero-full-container h1 {

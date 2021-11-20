@@ -171,4 +171,10 @@ border:1px solid #F75C1E;
 .form-group .form-control:focus{
     border:1px solid #F75C1E;
     border-radius:0.2cm;
+
+}
+
+.darken-video{
+    filter: brightness(20%);
+    
 }

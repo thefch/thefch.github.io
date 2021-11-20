@@ -98,22 +98,62 @@ border:1px solid #F75C1E;
 }
 
 .profile-img{
-    border:1px solid black; 
-    border-radius:0.5cm; 
+    display:block;
     width:300px;
+    border:1px solid black; 
+    border-radius:0.5cm;
+}
+
+@media screen and (max-width: 480px) {
+    .particles-js {
+      display: none;
+    }
+    body{
+        /* background-image:url('../assets/images/black-sand.jpg') ; */
+        /* background-color: black; */
+    }
+
+}
+
+
+.responsive-img-container{
+    text-align: center; 
+    display:block;
+    margin:auto;
+    width: 100%;
+}
+
+.responsive-img-container img{
+    width:85%;
     
 }
 
-.zoom {
-    transition: transform .2s; /* Animation */
-  }
-  
-.zoom:hover {
-transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-border-color:#F75C1E;
-box-shadow:0 0 50px 1px #F75C1E;
+
+.responsive-img-container .card-img{
+    max-height:200px;  
+    position:relative;  
 }
 
-@media (hover: hover) and (pointer: fine) {
 
+.responsive-img-container .card-img:hover{
+    z-index: 1000;
+}
+
+.card-container img{
+    display:none;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .responsive-img-container{
+        display:none;
+    }
+    .card-container img{
+        display:block;
+        width:100%;
+    }
+
+    .card-container.card-container-md{
+        margin-top: 10rem;
+    }
 }

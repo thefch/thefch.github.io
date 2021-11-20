@@ -21,6 +21,7 @@
 <link href="static/css/style.css" rel="stylesheet">
 
 <script src="static/js/magic_mouse-1.2.1.cdn.min.js"></script>
+
 </head>
 
 <body class="" style="background-color:rgb(32, 32, 32);">
@@ -55,6 +56,12 @@
 </header>
 
 <div class="hero-full-container background-image-container white-text-container">
+  <div class="video-container">
+    <video autoplay muted loop class="darken-video">
+      <source src="static/assets/videos/photoslider.mp4" type="video/mp4" />
+  </video>
+</div>
+      
 <div class="section-container">
     <div class="container">
       <div class="row">
@@ -143,6 +150,12 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
+
+
+document.querySelector('video').playbackRate = 4.0;
+
+
+
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 

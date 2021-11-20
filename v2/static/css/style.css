@@ -89,11 +89,12 @@ a {
     border:1px solid #F75C1E; 
 }
 
-.card-btn{
+.my-a-btn{
 border:1px solid #F75C1E; 
 }
-.card-btn:hover{
-    border:1px solid white; 
+
+.my-sumbit-btn:hover,.my-a-btn:hover{
+    border:1px solid white !important; 
     color:white !important;
 }
 
@@ -156,4 +157,18 @@ border:1px solid #F75C1E;
     .card-container.card-container-md{
         margin-top: 10rem;
     }
+}
+
+.my-sumbit-btn{
+    border-color:#F75C1E;
+     color:white;
+}
+
+.form-group .form-control{
+    border:1px solid white;
+    border-radius:0.2cm;
+}
+.form-group .form-control:focus{
+    border:1px solid #F75C1E;
+    border-radius:0.2cm;
 }

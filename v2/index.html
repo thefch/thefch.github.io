@@ -54,13 +54,18 @@
       </div> 
     </div>
   </nav>
-</header>
+</header> 
 <!-- Add your site or app content here -->
   <div class="hero-full-container background-image-container white-text-container" style="background-image: url('static/assets/images/thumbnail.jpg')">
     <div class="video-container">
-        <video autoplay muted loop>
-          <source src="static/assets/videos/hero-vaporwave.mp4" type="video/mp4" />
+        <video autoplay loop id="background-video">
+          <source src="static/assets/videos/hero-vaporwave-sound.mp4" type="video/mp4" />
       </video>
+    </div>
+    
+    <div class="volume-level-container">
+      <span id="soundLevel">20/100</span>
+      <input type="range" id="volume-level-input" min="0" max="1" step="0.1" value="0.2" onchange="changeSoundLevel(this)" onmouseover="showSoundLevel()">
     </div>
 
     <div class="container">
@@ -99,6 +104,30 @@ options = {
      movingBackgroundImage();
   });
 
+  document.getElementById('background-video').volume=0.2;
+  console.log('Video sound level:',document.getElementById('background-video').volume);
+
+  function changeSoundLevel(elem){
+    let vol =elem.value;
+    
+    document.getElementById('background-video').volume=vol;
+    let volOutOf100 = parseFloat(vol)*100;
+    
+    document.getElementById('soundLevel').textContent=volOutOf100+"/100";
+
+    showSoundLevel();
+  }
+
+  function showSoundLevel(){
+    let soundLevelTxt = document.getElementById('soundLevel').style.color="orange";
+    document.getElementById('soundLevel').style.fontSize="20px";
+    setInterval(function(){ 
+      document.getElementById('soundLevel').style.color="black";
+      document.getElementById('soundLevel').style.fontSize="11px";
+
+      
+    }, 3000);
+  }
 </script>
 
 

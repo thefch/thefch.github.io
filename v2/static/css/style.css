@@ -178,3 +178,36 @@ border:1px solid #F75C1E;
     filter: brightness(20%);
     
 }
+
+.volume-level-container{
+    position:absolute;
+    top:90%;
+    width:15%;
+    display:block;
+    margin-left:20px;
+    height:auto;
+
+}
+
+#volume-level-input{
+    width:100%;
+    height:30px;
+    z-index:1000;
+    /* accent-color: #F75C1E; */
+    border: solid 2px black;
+    border-radius:0.2cm;
+    background: rgba(247, 92, 30,0.4);
+    -webkit-appearance: none;
+    /* padding-top:5px; */
+    position:inherit;
+}
+
+#volume-level-input:hover{
+    background: #F75C1E;
+    border-color:white;
+}
+
+#soundLabel{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    position:inherit;
+}

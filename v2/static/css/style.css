@@ -167,15 +167,16 @@ border:1px solid #F75C1E;
 .form-group .form-control{
     border:1px solid white;
     border-radius:0.2cm;
+    color:orange;
+    background-color:rgba(255,255,255,0.1);
 }
 .form-group .form-control:focus{
     border:1px solid #F75C1E;
     border-radius:0.2cm;
-
 }
 
 .darken-video{
-    filter: brightness(20%);
+    filter: brightness(30%);
     
 }
 
@@ -186,19 +187,16 @@ border:1px solid #F75C1E;
     display:block;
     margin-left:20px;
     height:auto;
-
 }
 
 #volume-level-input{
     width:100%;
     height:30px;
     z-index:1000;
-    /* accent-color: #F75C1E; */
     border: solid 2px black;
     border-radius:0.2cm;
     background: rgba(247, 92, 30,0.4);
     -webkit-appearance: none;
-    /* padding-top:5px; */
     position:inherit;
 }
 

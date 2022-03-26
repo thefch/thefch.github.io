@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
@@ -18,7 +18,11 @@ function init(){
   });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  camera.position.setZ(30);
+  camera.position.setZ(100);
+  camera.position.setY(100);
+  camera.position.setX(20);
+
+
   
   renderer.render(scene,camera); 
 
@@ -30,7 +34,7 @@ function init(){
   // const lightHelper = new THREE.PointLightHelper(pointLight);
   // scene.add(lightHelper);
 
-  const gridHelper = new THREE.GridHelper(200,50);
+  const gridHelper = new THREE.GridHelper(10000,1000);
   scene.add(gridHelper);
 
   //model
@@ -51,8 +55,7 @@ function init(){
           
           mixer = new THREE.AnimationMixer( object);
           const clips = object.animations;
-
-          const clip = THREE.AnimationClip.findByName(clips,'mixamo.com');
+          const clip = THREE.AnimationClip.findByName(clips,'Armature|Armature|mixamo.com|Layer0');
           const action = mixer.clipAction(clip);
           action.play();
   // mixamo.com

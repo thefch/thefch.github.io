@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);*/
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 /*!
@@ -327,7 +328,7 @@ html {
 
 body {
     font-family: Roboto Mono, Helvetica, Arial, sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.78;
     color: #000;
     background-color: #fff
@@ -525,29 +526,29 @@ h6 small {
 
 .h1,
 h1 {
-    font-size: 70px
+    font-size: 72px
 }
 
 .h2,
 h2 {
-    font-size: 30px
+    font-size: 32px
 }
 
 .h3,
 h3 {
-    font-size: 20px
+    font-size: 22px
 }
 
 .h4,
 .h5,
 h4,
 h5 {
-    font-size: 11px
+    font-size: 13px
 }
 
 .h6,
 h6 {
-    font-size: 10px
+    font-size: 12px
 }
 
 p {
@@ -944,7 +945,7 @@ pre code {
 
 @media (min-width:1200px) {
     .container {
-        width: 1170px
+        width: 1200px
     }
 }
 

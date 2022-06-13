@@ -4,6 +4,7 @@ import { FBXLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/lo
 import { FlakesTexture } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/textures/FlakesTexture';
 import { RGBELoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/RGBELoader';
 const clock = new THREE.Clock();
+const manager = new THREE.LoadingManager();
 let camera, scene, renderer, controls, mixer;
 let light1,light2,light3,light4;
 
@@ -27,8 +28,6 @@ function init(){
   camera.position.setY(100);
   camera.position.setX(20);
 
-
-
   
   renderer.render(scene,camera); 
 
@@ -42,6 +41,25 @@ function init(){
 
   const gridHelper = new THREE.GridHelper(10000,1000);
   scene.add(gridHelper);
+
+  
+  async function returnFBX(pathname, scene) {
+      const loader = new THREE.ObjectLoader( manager );
+      return await loader.load( pathname, function ( object ) {
+        return object;
+      } );
+  }
+  
+  let afterloadObject = returnFBX('Walking.fbx',scene);
+  console.log(afterloadObject);
+  console.log('afterloadObject');
+
+//   const loader = new THREE.OBJLoader( manager );
+//   loader.load( 'Walking.fbx', function ( object ) {
+
+// 	//
+
+// } );
 
   let envmaploader = new THREE.PMREMGenerator(renderer);
   new RGBELoader().load('country_club_4k.hdr',function(hdrmap){
@@ -116,11 +134,12 @@ function init(){
   light4.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xffaa00 } ) ) );
   scene.add( light4 );
 
-
   controls = new OrbitControls(camera, renderer.domElement);
   scene.add(controls);
 
 }
+
+
 
 function render(){
   const delta = clock.getDelta();
@@ -162,6 +181,7 @@ function onWindowResize(){
     renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
+
 
 
 init();

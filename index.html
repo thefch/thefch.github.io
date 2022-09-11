@@ -1,641 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link href="static/assets/images/planet-32.png" rel="icon">
 
-    <!--====== Title ======-->
-    <title>Theo's portfolio</title>
+  <title>Theofanis Chatzidimitriou</title>  
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+<link href="static/css/main.3f6952e4.css" rel="stylesheet">
+<link href="static/css/style.css" rel="stylesheet">
 
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <!--====== Line Icons css ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.css">
+<script src="static/js/magic_mouse-1.2.1.cdn.min.js"></script>
 
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-    <!--====== PRELOADER PART START ======-->
+      <div class="collapse navbar-collapse" id="navbar-collapse" style="text-align:center;">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="" class="is-hover"><button class="my-btn magic-hover magic-hover__square">01 : Home</button></a></li>
+          <li><a href="./about.html" title=""><button class="my-btn magic-hover magic-hover__square">02 : About me</button></a></li>
+          <li><a href="./works.html" title=""><button class="my-btn magic-hover magic-hover__square">03 : Works</button></a></li>
+          <li><a href="./contact.html" title=""><button class="my-btn magic-hover magic-hover__square">04 : Contact</button></a></li>
+        </ul>
 
-    <div class="preloader">
-        <div class="loader_34">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+      </div> 
+    </div>
+  </nav>
+</header> 
+<!-- Add your site or app content here -->
+  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('static/assets/images/thumbnail.jpg')">
+    <div class="video-container">
+        <video autoplay loop id="background-video">
+          <source src="static/assets/videos/hero-vaporwave-sound.mp4" type="video/mp4" />
+      </video>
+    </div>
+    
+    <div class="volume-level-container">
+      <span id="soundLevel">20/100</span>
+      <input type="range" id="volume-level-input" min="0" max="1" step="0.1" value="0.2" onchange="changeSoundLevel(this)" onmouseover="showSoundLevel()">
     </div>
 
-    <!--====== PRELOADER ENDS START ======-->
-
-    <!--====== HEADER PART START ======-->
-
-    <header id="home" class="header-area">
-        <div class="navigation fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <table class="home-icon-container">
-                                    <tr>
-                                        <td>
-                                            <img id="home-icon-1" src="assets/images/fanos 8-bit.png" style="width: 50px; height:60px">
-                                            <img id="home-icon-2" src="assets/images/gif/blur noise rgb.gif" style="width: 50px; height:60px;">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </a>
-                            <!-- Logo -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
-                                    <!-- <li class="nav-item"><a class="page-scroll" href="#experience">Experience</a></li> -->
-                                    <li class="nav-item"><a class="page-scroll" href="#work">Portfolio</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
-                                </ul>
-                            </div>
-                            <!-- navbar collapse -->
-                        </nav>
-                        <!-- navbar -->
-                    </div>
-                </div>
-                <!-- row -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Hello,<br>
+                <span id="typed-strings">
+                  <span id="#strings">I'm Theofanis Chatzidimitriou</span>
+                  <span>Computer Science + Marketing student</span>
+                  <span>Working in Marketing</span>
+                </span>
+                <span id="typed"></span>
+              </h1>
             </div>
-            <!-- container -->
+          </div>
         </div>
-        <!-- navigation -->
-
-        <div id="parallax" class="header-content d-flex align-items-center">
-            <div class="header-shape shape-one layer" data-depth="0.10">
-                <img src="assets/images/banner/shape/shape-1.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-tow layer" data-depth="0.30">
-                <img src="assets/images/banner/shape/shape-2.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-three layer" data-depth="0.40">
-                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-fore layer" data-depth="0.60">
-                <img src="assets/images/banner/shape/shape-2.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-five layer" data-depth="0.20">
-                <img src="assets/images/banner/shape/shape-1.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-six layer" data-depth="0.15">
-                <img src="assets/images/banner/shape/shape-4.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-seven layer" data-depth="0.50">
-                <img src="assets/images/banner/shape/shape-5.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-eight layer" data-depth="0.40">
-                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-nine layer" data-depth="0.20">
-                <img src="assets/images/banner/shape/shape-6.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="header-shape shape-ten layer" data-depth="0.30">
-                <img src="assets/images/banner/shape/shape-3.png" alt="Shape">
-            </div>
-            <!-- header shape -->
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="header-content-right">
-                            <h4 class="sub-title">Hello, I’m</h4>
-                            <h1 class="title">Theofanis Chatzidimitriou</h1>
-                            <p>A Computing Science graduate</p>
-                            <a class="main-btn" href="#work">View my Projects</a>
-                        </div>
-                        <!-- header content right -->
-                    </div>
-                    <div class="col-lg-6 offset-xl-1">
-                        <div class="big-image-banner">
-                            <img class="img-back" src="assets/images/gif/myself.gif" alt="hero">
-                            <img class="img-top" src="assets/images/gif/myself-wink.gif" alt="wink">
-                        </div>
-                        <!-- header image -->
-                    </div>
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
-            <div class="header-social">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="header-social-icon">
-                                <ul>
-                                    <li><a href="https://github.com/thefch"><i class="lni-github-original"></i></a></li>
-                                    <li><a href="
-                                    https://www.linkedin.com/in/theof-chdim/"><i class="lni-linkedin-original"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- header social -->
-                        </div>
-                    </div>
-                    <!-- row -->
-                </div>
-                <!-- container -->
-            </div>
-            <!-- header social -->
-        </div>
-        <!-- header content -->
-    </header>
-
-    <!--====== HEADER PART ENDS ======-->
-
-    <!--====== ABOUT PART START ======-->
-
-    <section id="about" class="about-area pt-125 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <h2 class="title">About Me</h2>
-                    </div>
-                    <!-- section title -->
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content mt-50">
-                        <h5 class="about-title">Hey! I'm Theofanis</h5>
-                        <p>I am a Computing Science graduate from the University of East Anglia. I like solving problems in my own weird way and most of the times work 😎. I am looking for opportunities in the technological sector and also am interested
-                            in the eSports business development. I am fascinated about technology and eSports and I believe a combination of these two sectors will help me enhance my knowledge and skills as well as shape my knowledge on how these types
-                            of industries work.
-
-                            <ul class="clearfix">
-                                <li>
-                                    <div class="single-info d-flex align-items-center">
-                                        <div class="info-icon">
-                                            <i class="lni-calendar"></i>
-                                        </div>
-                                        <div class="info-text">
-                                            <p><span>Date of birth:</span> 6 February 1998</p>
-                                        </div>
-                                    </div>
-                                    <!-- single info -->
-                                </li>
-                                <li>
-                                    <div class="single-info d-flex align-items-center">
-                                        <div class="info-icon">
-                                            <i class="lni-envelope"></i>
-                                        </div>
-                                        <div class="info-text">
-                                            <p><span>Email:</span> theofanis.ch@hotmail.com</p>
-                                        </div>
-                                    </div>
-                                    <!-- single info -->
-                                </li>
-                                <li>
-                                    <div class="single-info d-flex align-items-center">
-                                        <div class="info-icon">
-                                            <i class="lni-map-marker"></i>
-                                        </div>
-                                        <div class="info-text">
-                                            <p><span>Location:</span> Cyprus</p>
-                                        </div>
-                                    </div>
-                                    <!-- single info -->
-                                </li>
-                            </ul>
-                    </div>
-                    <!-- about content -->
-                </div>
-                <div class="col-xl-5 offset-xl-1 col-lg-6">
-                    <br><br><br>
-                    <h4>Some of my technical skills 💻:</h4>
-                    <br>
-                    <h6>Programming languages used 📑:</h6>
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Python</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Java</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">C++</span>
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Matlab</span>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                    <h6>Other useful technical knowledge ✅:</h6>
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Git</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">SQL</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Flask</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">Wordpress</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">JavaFX</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="skill-holder">
-                                    <span class="skill-box">OpenGL</span>
-                                </div>
-                            </td>
-
-                        </tr>
-
-                    </table>
-
-                    </tr>
-                    <!-- about skills -->
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-    </section>
-
-    <!--====== ABOUT PART ENDS ======-->
-
-    <!-- EXPERIENCE PART START -->
-
-    <!-- <section id="experience" class="about-area pt-125 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <h3>Experience</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="content-right">
-                        <ul class="timeline">
-                            <li>
-                                <h4>Pentagon Design</h4>
-                                <span>Graphic Designer (2017 - 2019)</span>
-                            </li>
-                            <li>
-                                <h4>Animate Studio</h4>
-                                <span>Graphic Designer (2015 - 2017)</span>
-                            </li>
-                            <li>
-                                <h4>Cute Studio</h4>
-                                <span>Graphic Designer (2014 - 2015)</span>
-                            </li>
-                            <li>
-                                <h4>City Printing</h4>
-                                <span>Graphic Designer (2013 - 2014)</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section> -->
-
-    <!-- EXPERIENCE PART ENDS -->
-
-    <!--====== CALL TO ACTION PART START ======-->
-
-    <section id="call-to-action" class="call-to-action pt-125 pb-130 bg_cover" style="background-image: url(assets/images/call-to-action.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-9">
-                    <div class="call-action-content text-center">
-                        <h2 class="action-title">Interested in giving me a chance?</h2>
-                        <p>You can contact me by email through the contact me form below. You can also have a look on my CV for a more traditional display of my skills.</p>
-                        <ul>
-                            <li><a class="main-btn custom" href="assets/cv/cv.pdf">download cv</a></li>
-                            <li><a class="main-btn custom-2" href="mailto:theofanis.ch@hotmail.com?subject = Feedback&body = Message">Email me</a></li>
-                        </ul>
-                    </div>
-                    <!-- call action content -->
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-    </section>
-
-    <!--====== CALL TO ACTION PART ENDS ======-->
-
-    <!--====== WORK PART START ======-->
-
-    <section id="work" class="work-area pt-125 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="section-title pb-25">
-                        <h2 class="title">My Recent Projects</h2>
-                        <p>Here is my recent work/projects. Some of them are openly viible on github and others are private, so message me if you are interested for a demo.</p>
-                    </div>
-                    <!-- section title -->
-                </div>
-            </div>
-            <!-- row -->
-
-
-            <table class="recent-work-table">
-                <tr>
-                    <td>
-                        <a href="https://github.com/thefch/projectOpenGL">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">Final year project 2019-2020</span>
-                            </div>
-                    </td>
-                    <td class="recent-work-cell">
-                        <a href="https://github.com/thefch/image_classification_cw">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">Image classification</span>
-                            </div>
-
-                    </td>
-                    <td class="recent-work-cell">
-                        <a href="https://github.com/thefch/authentication_method_cw">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">Graphical password</span>
-                            </div>
-                    </td>
-                    <td>
-                        <a href="https://github.com/thefch/3d_submarine_simulation_OpenGL">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">3D Submarine simulation</span>
-                            </div>
-                    </td>
-
-                </tr>
-                <tr>
-
-                    <td>
-                        <a href="https://github.com/thefch/CMP-6040A-Artificial-Intelligence-Report">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title"><strong>Chatbot</strong> for booking service</span>
-                            </div>
-                    </td>
-                    <td>
-                        <a href="https://github.com/thefch/ninja_knights_2d_platform_game">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">2D Platform game</span>
-                            </div>
-                    </td>
-                    <td>
-                        <a href="https://github.com/thefch/whist">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title"><strong>Whist</strong> - Text based card game</span>
-                            </div>
-                    </td>
-                    <td>
-                        <a href="https://github.com/thefch/localNotepadPY">
-                            <div class="recent-work-box">
-                                <span class="recent-work-title">Local command line <strong>Notepad</strong>
-                            <p class="" style="font-weight:lighter;">in progress</p>
-                            </span>
-                            </div>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="work-more text-center mt-50">
-                        <a class="main-btn" href="https://github.com/thefch">more works</a>
-                    </div>
-                    <!-- work more -->
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-    </section>
-
-    <!--====== WORK PART ENDS ======-->
-
-    <!--====== CONTACT PART START ======-->
-
-    <section id="contact" class="contact-area pt-125 pb-130 gray-bg">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center pb-25">
-                        <h2 class="title">Get In Touch</h2>
-                        <p></p>
-                    </div>
-                    <!-- section title -->
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row justify-content-center">
-                <div class="email-container">
-
-
-                    <div class="contact-box text-center mt-30">
-                        <div class="contact-icon">
-                            <i class="lni-envelope"></i>
-                        </div>
-                        <div class="contact-content">
-                            <h6 class="contact-title">Email</h6>
-                            <p>theofanis.ch@hotmail.com</p>
-                        </div>
-                    </div>
-                    <!-- contact box -->
-                </div>
-
-
-
-                <div class="col-sm1">
-                    <div class="face-img-box">
-                        <img src="assets/images/myface.jpeg">
-                    </div>
-                </div>
-
-            </div>
-            <!-- row -->
-
-
-            <div class="row">
-
-
-                <div class="col-lg-6">
-                    <div class="contact-form pt-30">
-                        <form id="contact-form" action="https://formspree.io/xyynpzwb" method="POST">
-                            <div class="single-form">
-                                <input type="text" name="name" placeholder="Name" required>
-                            </div>
-                            <!-- single form -->
-                            <div class="single-form">
-                                <input type="email" name="email" placeholder="Email" required>
-                            </div>
-                            <!-- single form -->
-                            <div class="single-form">
-                                <textarea name="message" placeholder="Message" required></textarea>
-                            </div>
-                            <!-- single form -->
-                            <p class="form-message"></p>
-                            <div class="single-form">
-                                <button class="main-btn" type="submit">Send Message</button>
-                            </div>
-                            <!-- single form -->
-                        </form>
-                    </div>
-                    <!-- contact form -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-map mt-60">
-                        <div class="gmap_canvas">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20163.138559350788!2d33.043956174132084!3d34.664784189012714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e73316ac02f49d%3A0xdaa97f957025b012!2sLimassol%2C%20Cyprus!5e1!3m2!1sen!2suk!4v1591922517677!5m2!1sen!2suk"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>
-                    </div>
-                    <!-- contact map -->
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-    </section>
-
-    <!--====== CONTACT PART ENDS ======-->
-
-    <!--====== FOOTER PART START ======-->
-
-    <footer id="footer" class="footer-area">
-        <div class="footer-copyright pb-20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text text-center pt-20">
-
-                        </div>
-                        <!-- copyright text -->
-                    </div>
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- footer widget -->
-    </footer>
-
-    <!--====== FOOTER PART ENDS ======-->
-
-    <!--====== BACK TOP TOP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-
-
-
-
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-    <!--====== Parallax js ======-->
-    <script src="assets/js/parallax.min.js"></script>
-
-    <!--====== Counter Up js ======-->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-
-
-    <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
-
-    <!--====== Scrolling js ======-->
-    <script src="assets/js/scrolling-nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-
-
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-
-</body>
+      </div>
+    </div>
+  </div>
+
+<script>
+options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": true,
+  "outerWidth": 41,
+  "outerHeight": 41
+}; 
+ magicMouse(options);
+
+  document.addEventListener("DOMContentLoaded", function (event) {
+     type();
+     movingBackgroundImage();
+  });
+
+  document.getElementById('background-video').volume=0.2;
+  console.log('Video sound level:',document.getElementById('background-video').volume);
+
+  function changeSoundLevel(elem){
+    let vol =elem.value;
+    
+    document.getElementById('background-video').volume=vol;
+    let volOutOf100 = parseFloat(vol)*100;
+    
+    document.getElementById('soundLevel').textContent=volOutOf100+"/100";
+
+    showSoundLevel();
+  }
+
+  function showSoundLevel(){
+    let soundLevelTxt = document.getElementById('soundLevel').style.color="orange";
+    document.getElementById('soundLevel').style.fontSize="20px";
+    setInterval(function(){ 
+      document.getElementById('soundLevel').style.color="black";
+      document.getElementById('soundLevel').style.fontSize="11px";
+
+      
+    }, 3000);
+  }
+</script>
+
+
+<script type="text/javascript" src="static/js/main.70a66962.js"></script></body>
 
 </html>

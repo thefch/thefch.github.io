@@ -15,11 +15,14 @@
   <link href="static/assets/images/planet-32.png" rel="icon">
 
   <title>Theofanis Chatzidimitriou</title>  
-
+  
 <link href="static/css/main.3f6952e4.css" rel="stylesheet">
 <link href="static/css/style.css" rel="stylesheet">
 
-
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="static/js/magic_mouse-1.2.1.cdn.min.js"></script>
 
 </head>
@@ -62,10 +65,11 @@
     </div>
     
     <div class="volume-level-container">
-      <span id="soundLevel">20/100</span>
-      <input type="range" id="volume-level-input" min="0" max="1" step="0.1" value="0.2" onchange="changeSoundLevel(this)" onmouseover="showSoundLevel()">
+      <span id="volume-level-label">20/100</span>
+      <!-- <input type="range" id="volume-level-input" min="0" max="1" step="0.1" value="0.2"  >onchange="updateVolumeLevel(this)" -->
+      <div id="volume-level-slider"></div>
     </div>
-
+ 
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -101,31 +105,32 @@ options = {
      type();
      movingBackgroundImage();
   });
+  // document.getElementById('volume-level-input').addEventListener("change", updateVolumeLevel('volume-level-input'));
+  
 
   document.getElementById('background-video').volume=0.2;
   console.log('Video sound level:',document.getElementById('background-video').volume);
 
-  function changeSoundLevel(elem){
-    let vol =elem.value;
-    
-    document.getElementById('background-video').volume=vol;
-    let volOutOf100 = parseFloat(vol)*100;
-    
-    document.getElementById('soundLevel').textContent=volOutOf100+"/100";
 
-    showSoundLevel();
-  }
+  
+  $( function() {
+    $( "#volume-level-slider" ).slider({
+        // range:true,
+        value:20,
+        min: 0,
+        max: 100,
+        slide: function( event, ui ) {
+          // update video volume
+          $( "#background-video" ).prop("volume", ui.value/100);
 
-  function showSoundLevel(){
-    let soundLevelTxt = document.getElementById('soundLevel').style.color="orange";
-    document.getElementById('soundLevel').style.fontSize="20px";
-    setInterval(function(){ 
-      document.getElementById('soundLevel').style.color="black";
-      document.getElementById('soundLevel').style.fontSize="11px";
-
-      
-    }, 3000);
-  }
+          // update volume level label
+          document.getElementById('volume-level-label').textContent=ui.value+"/100";
+          console.log('volume:',ui.value,document.getElementById('background-video').volume);
+          
+        }
+    });
+  });
+  
 </script>
 
 

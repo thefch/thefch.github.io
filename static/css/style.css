@@ -180,6 +180,7 @@ border:1px solid #F75C1E;
     
 }
 
+/** Start volume slider **/
 .volume-level-container{
     position:absolute;
     top:90%;
@@ -189,28 +190,43 @@ border:1px solid #F75C1E;
     height:auto;
 }
 
-#volume-level-input{
+.volume-level-container:hover #volume-level-slider{
+    color:white;
+    cursor: crosshair;
+    border-color: white;
+}
+
+.volume-level-container:hover #volume-level-label{
+    color: white;
+}
+
+#volume-level-slider{
     width:100%;
-    height:30px;
+    height:10px;
     z-index:1000;
     border: solid 2px black;
-    border-radius:0.2cm;
+    border-radius: 50px;
     background: rgba(247, 92, 30,0.4);
     -webkit-appearance: none;
     position:inherit;
 }
 
-#volume-level-input:hover{
+#volume-level-slider a{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
     background: #F75C1E;
-    border-color:white;
+    cursor: crosshair;
+    border-radius: 50px;
 }
 
-#soundLabel{
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    position:inherit;
-}
+/* #volume-level-input:hover #sound-level-label{
+    color:pink;
+} */
+/** End volume slider **/
 
-/** Custom scrollbar **/
+/** Start Custom scrollbar **/
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -234,9 +250,9 @@ border:1px solid #F75C1E;
 ::-webkit-scrollbar-corner {
     background: rgba(0,0,0,0);
 }
+/** End Custom scrollbar **/
 
-
-/**Custom text selection**/
+/** Start Custom text selection**/
 ::moz-selection{
 	color:black;
 	background:	orange;
@@ -248,3 +264,4 @@ border:1px solid #F75C1E;
 	background:	orange;
     text-shadow:0 0px 0px #000 !important;
 }
+/** End Custom text selection**/

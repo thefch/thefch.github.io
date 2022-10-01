@@ -68,6 +68,7 @@ html,
 
 a {
   color: #F75C1E !important;
+  cursor: pointer;
 }
 
 .gradient-color {
@@ -437,8 +438,12 @@ Main components
 
 .cd-timeline-content .timeline-content-info .timeline-content-info-title,
 .timeline-content-info-date {
-  width: calc(50% - 2px);
-  display: inline-block;
+  width: 100%;
+  display:inline-block;
+}
+
+.timeline-content-info-date{
+  font-size: 10px;
 }
 
 .cd-timeline-content .timeline-content-info i {
@@ -456,17 +461,22 @@ Main components
   color: rgba(255, 255, 255, .9);
   margin-top: 0;
   margin-bottom: 5px;
+  padding-left:0;
 }
 
 .cd-timeline-content p,
 .cd-timeline-content .cd-date {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 13px;
   font-size: 0.8125rem;
 }
 
 .cd-timeline-content .cd-date {
   display: inline-block;
+}
+
+.cd-date{
+  z-index: 100;
 }
 
 .cd-timeline-content p {
@@ -493,7 +503,7 @@ Main components
 
   .cd-timeline-content p {
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 11px;
   }
 
   .cd-timeline-content .cd-read-more,
@@ -522,7 +532,7 @@ Main components
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
-    left: 122%;
+    left: 135%;
     top: 6px;
     font-size: 16px;
     font-size: 1rem;
@@ -546,9 +556,18 @@ Main components
 
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
-    right: 122%;
+    right: 135%;
     text-align: right;
   }
 }
 
+.timeline-company-logo{
+  width: 50px;
+  padding: 5px;
+}
+
+.timeline-content-points{
+  font-size: 10px;;
+}
 /** End Timeline **/
+

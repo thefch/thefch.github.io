@@ -571,3 +571,8 @@ Main components
 }
 /** End Timeline **/
 
+.full-background canvas{
+	position:absolute;
+	top:0;
+	left:0;
+}

@@ -5758,7 +5758,8 @@ body.minimal {
 .btn {
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
-    transition: all .2s linear
+    transition: all .2s linear;
+    border-radius: 5px;
 }
 
 .btn-default:focus,

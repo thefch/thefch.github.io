@@ -20,7 +20,8 @@
   <link href="static/css/style.css" rel="stylesheet">
 
   <script src="static/js/magic_mouse-1.2.1.cdn.min.js"></script>
-  <script src="static/js/particles.js"></script>
+  <script src="static/js/p5.min.js"></script>
+  <script src="static/js/vanta.topology.min.js"></script>
   <script src="static/js/nav.js"></script>
 </head>
 
@@ -57,14 +58,14 @@
 </header>
 
 <div class="hero-full-container background-image-container white-text-container" style="background-color:rgb(0, 0, 0);">
-  <div class="particles-js" id="particles-js" style="background-color: rgb(35, 0, 163);position: absolute; width: 100%; height: 100%;"></div>
+  <div id="full-screen" style="background-color: black;position: absolute; width: 100%; height: 100%;"></div>
 
 <div class="section-container"">
   <div class="container">
     <div class="row">
       <div class="text-center title-heading">
         <button class="title-heading-btn">
-          <h1 class="h2 colored-heading">03 : Works</h1>
+          <h1 class="h2 colored-heading">04 : Works</h1>
         </button>
       </div>
       <div class="row">
@@ -162,7 +163,7 @@
                       <!-- <a href="#" class="btn btn-default">Discover</a> -->
                     </div>
                   </div>
-                   <div class="col-sm-4">
+                  <div class="col-sm-4">
                       <div class="responsive-img-container">
                         <a href="#" class="black-image-project-hover">
                           <img src="static/assets/images/signature.png" alt="Image" class="card-img">
@@ -220,6 +221,21 @@
 </div>
 
 <script>
+  VANTA.TOPOLOGY({
+    el: "#full-screen",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xF75C1E,
+    backgroundColor: 0x0
+  })
+  </script>
+
+<script>
   options = {
   "cursorOuter": "circle-basic",
   "hoverEffect": "circle-move",
@@ -227,17 +243,13 @@
   "defaultCursor": true,
   "outerWidth": 41,
   "outerHeight": 41
-}; 
- magicMouse(options);
+  }; 
+  magicMouse(options);
 
   document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
+    navActivePage();
   });
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('particles-js', 'static/assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
 </script>
  <script type="text/javascript" src="static/js/main.70a66962.js"></script></body>
 
